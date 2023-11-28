@@ -1,5 +1,4 @@
 from django.db import models
-# from django.contrib.auth.models import CustomUser
 
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -38,7 +37,6 @@ class CustomUser(AbstractUser):
     class Meta:
         permissions = (
             ("can_do_something", "Can do something"),
-            # Add any additional permissions you may need
         )
 
 
@@ -72,7 +70,6 @@ class Product(models.Model):
 class ProductAccess(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    # Add any additional fields as needed, e.g., permission level
 
 
 class Lesson(models.Model):
@@ -80,7 +77,6 @@ class Lesson(models.Model):
     video_link = models.URLField()
     duration_seconds = models.IntegerField()
     products = models.ManyToManyField(Product)
-    # Additional fields for viewing information
     viewed_status = models.BooleanField(default=False)
     viewing_time_seconds = models.IntegerField(default=0)
 

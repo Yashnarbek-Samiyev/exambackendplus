@@ -21,7 +21,6 @@ class ProductAccessSerializer(serializers.ModelSerializer):
         model = ProductAccess
         fields = '__all__'
 
-# serializers.py
 
 
 class LessonSerializer(serializers.ModelSerializer):
