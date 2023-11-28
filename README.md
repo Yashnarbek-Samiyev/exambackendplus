@@ -77,5 +77,3 @@
 
 8. **Documentation:**
    - Document your API endpoints, including the expected request and response formats.
-
-By following these steps and considering the principles outlined in the provided Django documentation, you can build a robust system for training with optimized database relationships and queries. If you have specific questions or need further clarification on any of these steps, feel free to ask!
